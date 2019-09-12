@@ -15,3 +15,4 @@ console.log(x);
 
 var foo = { bar: { bas: 23 } };
 var { bar: { bas } } = foo;
+
