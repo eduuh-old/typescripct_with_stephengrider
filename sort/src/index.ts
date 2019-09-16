@@ -1,23 +1,13 @@
-class Sorter{
-  constructor(public collection: number[]) {
-    this.collection = collection; 
-  }
-  //implemetation of Bubble sort algorithm
-  sort():void {
-    const { length } = this.collection;
-    for (let i = 0; i < length; i++){
-      for (let j = 0; j < length - i - 1; j++){
-        if (this.collection[j] > this.collection[j + 1]) {
-          const leftHand = this.collection[j];
-          this.collection[j] = this.collection[j + 1];
-          this.collection[j + 1] = leftHand;
-        }
-      }
-    }
-}
-  
-}
+import { Sorter } from "./sorter";
+import { NumbersCollections } from "./numberscollectins";
+import { CharacterCollection } from "./CharacterCollection";
 
-const sorter = new Sorter([10, 3, -5, 1]);
+const numbercollections = new NumbersCollections([20, 10, 3, -5, 0]);
+const sort = new Sorter(numbercollections);
+sort.sort();
+console.log(numbercollections);
+
+const charactercollections = new CharacterCollection("Edwin kamau");
+const sorter = new Sorter(charactercollections);
 sorter.sort();
-console.log(sorter.collection);
+console.log(charactercollections);
