@@ -1,10 +1,11 @@
-export class NumbersCollections{
-  data: number[];
+import { Sorter } from './sorter';
+export class NumbersCollections extends Sorter{
+
   get length(): number{
     return this.data.length;
   }
-  constructor(data: number[]) {
-    this.data = data;
+  constructor(public data: number[]) {
+    super();
   }
   compare(leftindex:number,rightindex:number): boolean{
     return this.data[leftindex] > this.data[rightindex];
